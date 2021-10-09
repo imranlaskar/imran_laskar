@@ -31,21 +31,24 @@ class _MyHomepageState extends State<MyHomepage> {
       appBar: AppBar(
         title: Text("My Frist App", style: TextStyle(color: Colors.blue),)
       ),
-      body: Center(
-        child: Column(
-          children: [
-            RaisedButton(
-              color: btnColor1,
-              child: Text(btnText1,style: TextStyle(color: btnTextColor),),
-                onPressed: (){
-                setState(() {
-                  btnTextColor=Colors.white;
-                  btnText1="Thank You";
-                  btnColor1= Colors.brown;
-                });
-                }
-            )
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              RaisedButton(
+                color: btnColor1,
+                child: Text(btnText1,style: TextStyle(color: btnTextColor),),
+                  onPressed: (){
+                  setState(() {
+                    btnTextColor=Colors.white;
+                    btnText1="Thank You";
+                    btnColor1= Colors.brown;
+                  });
+                  }
+              ),
+              Image.asset("assets/images/Imran.jpg"),
+            ],
+          ),
         ),
       )
 
